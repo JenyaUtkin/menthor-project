@@ -1,6 +1,6 @@
 const express = require('express');
 
-const profileData = require('../mock/profile');
+const { profileData } = require('../mock/profileData');
 
 const router = express.Router();
 

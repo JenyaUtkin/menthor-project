@@ -1,2 +1,21 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class='container'>
+  <h1>Главная страница</h1>
+  <div>
+    <form action='/' method='post'>
+      <label for='search'>
+        <input type='text' name='search' placeholder='найти ментора' />
+      </label>
+      <button>Поиск</button>
+    </form>
+
+  </div>
+
+  <div>
+    <ul>
+      {{#each mentors}}
+        <li>mentor 1 {{this.fio}} </li>
+
+      {{/each}}
+    </ul>
+  </div>
+</div>
