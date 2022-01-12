@@ -2,10 +2,20 @@
   <h1>Главная страница</h1>
   <div>
     <form action='/' method='post'>
-      <label for='search'>
-        <input type='text' name='search' placeholder='найти ментора' />
-      </label>
-      <button>Поиск</button>
+      <div class='mdl-textfield mdl-js-textfield'>
+        <label class='mdl-textfield__label' for='search'>
+        </label>
+        <input
+          class='mdl-textfield__input'
+          type='text'
+          name='search'
+          placeholder='найти ментора'
+        />
+
+      </div>
+      <button
+        class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored'
+      >Поиск</button>
     </form>
 
   </div>

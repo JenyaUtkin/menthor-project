@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 const express = require('express');
 const logger = require('morgan');
-
+const hbs = require('hbs');
 // Импортируем созданный в отдельный файлах рутеры.
 
 const app = express();
@@ -15,6 +15,8 @@ const profileRouter = require('./routes/profile');
 
 // Сообщаем express, что в качестве шаблонизатора используется "hbs".
 app.set('view engine', 'hbs');
+hbs.registerPartials(`${__dirname}/views/partials`);
+
 // Сообщаем express, что шаблона шаблонизаторая (вью) находятся в папке "ПапкаПроекта/views".
 app.set('views', 'views');
 
