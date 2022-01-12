@@ -1,10 +1,12 @@
 const express = require('express');
 
+const profileData = require('../mock/profile');
+
 const router = express.Router();
 
-/* GET users listing. */
 router.get('/', (req, res) => {
-  res.render('profile', { title: 'user' });
+  console.log(profileData);
+  res.render('profile', { title: 'profile', profile: profileData });
 });
 
 module.exports = router;
