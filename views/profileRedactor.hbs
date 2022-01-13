@@ -1,16 +1,4 @@
-<div>
-  <h1> Profile </h1>
-  <div>
-    {{#with user}}
-      <div> ФИО {{name}} </div>
-      <div> стаж {{exp}} </div>
-      <div> о себе {{about}} </div>
-      <div> теги {{tags}} </div>
-    {{/with}}
-  </div>
-</div>
-
-{{!-- <form action='/user/profile/{{userid}}' method='put'>
+<form action='/user/profile/{{userid}}' method='put'>
   <div>
     <input type='text' placeholder='фото' />
   </div>
@@ -33,4 +21,4 @@
     <input type='text' placeholder='теги' />
   </div>
   <button type='submit'>редактировать</button>
-</form> --}}
+</form>
