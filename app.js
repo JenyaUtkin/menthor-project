@@ -12,6 +12,7 @@ const FileStore = require('session-file-store')(session);
 const hbs = require('hbs');
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/userRouter');
+const myProfilRouter = require('./routes/myProfilRouter')
 
 hbs.registerPartials(path.join(process.env.PWD, 'views', 'partials'));
 const app = express();
@@ -43,6 +44,7 @@ app.use(
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
+app.use('/profil', myProfilRouter);
 
 app.listen(PORT, () => {
   console.log('Server start ====>>>', PORT);
