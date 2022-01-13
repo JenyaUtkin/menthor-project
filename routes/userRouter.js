@@ -1,13 +1,17 @@
 const router = require('express').Router();
-const {Users} = require('../db/models/');
+const {checkUser, deeper, welcomeUser} = require('../midlleware/allMidlleware')
+const {Users, Entry} = require('../db/models/');
 const sha256 = require('sha256')
+
 router.get("/register", (req, res) => {
   res.render("registration");
 });
 router.post("/register", async (req, res) => {
-  const { name, email, role_id } = req.body;
+  const { name, login } = req.body;
+  const role_id = req.body.options
   const password = sha256(req.body.password);
-  const user = await Users.create({ name, email, password });
+  console.log(req.body.options);
+  const user = await Users.create({ name, login, password,role_id });
   req.session.userName = user.name;
   req.session.userEmail = user.email;
   req.session.userId = user.id;
@@ -18,8 +22,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 router.post("/login", async (req, res) => {
-  const { email } = req.body;
-  const user = await Users.findOne({ where: { email } });
+  const { login } = req.body;
+  const user = await Users.findOne({ where: { login } });
   if (user) {
     if (user.password === sha256(req.body.password)) {
       req.session.userName = user.name;
@@ -34,10 +38,10 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.get("/profile/:id",  async (req, res) => {
+router.get("/profile/:id", checkUser, deeper, async (req, res) => {
   const user = await Users.findByPk(req.params.id);
-  const post = await Entry.findAll({ where: { user_id: req.params.id } });
-  res.render("profile", { user, post });
+  
+  res.render("profile", { user });
 });
 // router.post('/profile/:id',checkUser, async (req, res) => {
 

@@ -1,1 +1,11 @@
-<h2>Profie</h2>
+<div>
+  <h1> Profile </h1>
+  <div>
+    {{#with profile}}
+      <div> ФИО {{fio}} </div>
+      <div> стаж {{exp}} </div>
+      <div> о себе {{about}} </div>
+      <div> теги {{tags}} </div>
+    {{/with}}
+  </div>
+</div>
