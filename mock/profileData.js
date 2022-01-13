@@ -1,5 +1,5 @@
 const profileData = {
-  fio: 'lolka',
+  fio: 'polya',
   exp: 2,
   about: 'lolka love elka',
   tags: 'js',

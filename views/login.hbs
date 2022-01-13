@@ -1,14 +1,18 @@
 <form action="/login" method="post">
 
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  <div class='mdl-textfield mdl-js-textfield'>
+    <label class='mdl-textfield__label' for='exampleInputEmail1'>Email</label>
+    <input
+      class='mdl-textfield__input'
+      type='email'
+      aria-describedby='emailHelp'
+      name='email'
+    />
+    <div id='emailHelp'></div>
   </div>
-
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+  <div class='mdl-textfield mdl-js-textfield'>
+    <label class='mdl-textfield__label'>Password</label>
+    <input class='mdl-textfield__input' type='password' name='password' />
   </div>
   
   <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">login</button>
