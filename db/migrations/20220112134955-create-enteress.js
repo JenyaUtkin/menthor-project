@@ -18,7 +18,14 @@ module.exports = {
       profils_id: {
         type: Sequelize.INTEGER,
         references:{
-          model:'Profils',
+          model:'Menthor',
+          key:'id'
+        }
+      },
+      practical_id: {
+        type: Sequelize.INTEGER,
+        references:{
+          model:'Practis',
           key:'id'
         }
       },

@@ -9,13 +9,15 @@ const session = require('express-session');
 const cors = require('cors');
 const FileStore = require('session-file-store')(session);
 
-const hbs = require('hbs')
+const hbs = require('hbs');
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/userRouter');
- hbs.registerPartials(path.join(process.env.PWD, 'views', 'partials'));
+const myProfilRouter = require('./routes/myProfilRouter')
+
+hbs.registerPartials(path.join(process.env.PWD, 'views', 'partials'));
 const app = express();
 
-const PORT = process.env.PORT;
+const { PORT } = process.env;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,25 +29,23 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
-
 app.use(cors());
 app.use(cookieParser());
-app.use(session({
-  store: new FileStore(),
-  secret: 'secret',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { secure: false },
-  name: 'myAuth',
-}));
+app.use(
+  session({
+    store: new FileStore(),
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false },
+    name: 'myAuth',
+  })
+);
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
-
+app.use('/profil', myProfilRouter);
 
 app.listen(PORT, () => {
-  console.log('Server start ====>>>', PORT)
-})
-
+  console.log('Server start ====>>>', PORT);
+});
