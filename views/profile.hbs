@@ -14,25 +14,6 @@
       {{#each mentor}}
       <li>
 
-        <div class="demo-card-square mdl-card mdl-shadow--2dp">
-          <img src="{{this.img}}">
-              <div class="mdl-card__title mdl-card--expand">
-            <h2 class="mdl-card__title-text">{{this.name}}</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              {{this.body}}
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-          <a href="user/profile/{{this.id}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Подробнее
-          </a>
-          </div>
-        </div>
-      </li>
-
-      {{/each}}
-    </ul>
-  </div>
 
 
 
@@ -50,27 +31,45 @@
 
 
 
-{{!-- <form action='/user/profile/{{userid}}' method='put'>
+
+
+
+
+
+
+<form action='/user/profile/{{userid}}' method='put'>
+{{#if user.flag}}
+>>>>>>> d5bd4528ffa264c718f8521467de40fe2a95cb0d
   <div>
-    <input type='text' placeholder='фото' />
+    <input type='text' placeholder='фото' name=""/>
   </div>
   <div>
-    <input type='text' placeholder='ФИО' />
+    <input type='text' placeholder='ФИО' name="name"/>
   </div>
   <div>
-    <input type='text' placeholder='О себе' />
+    <input type='text' placeholder='О себе' name="body"/>
   </div>
   <div>
-    <input type='text' placeholder='Прайс' />
+    <input type='text' placeholder='Прайс' name="price"/>
   </div>
   <div>
-    <input type='text' placeholder='опыт работы' />
+    <input type='text' placeholder='опыт работы' name="title"/>
   </div>
   <div>
-    <input type='text' placeholder='соц сети' />
+    <input type='text' placeholder='соц сети' name="link"/>
+  </div>
+  {{/if}} 
+
+  <div>
+    <input type='text' placeholder='ФИО' name="name"/>
   </div>
   <div>
-    <input type='text' placeholder='теги' />
+    <input type='text' placeholder='О себе' name="body"/>
+    </div>
+  <div>
+    <input type='text' placeholder='соц сети' name="link"/>
   </div>
   <button type='submit'>Сохранить</button>
-</form> --}}
+
+</form>
+
