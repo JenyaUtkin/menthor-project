@@ -1,7 +1,7 @@
 
-<form action='/user/profile/{{userid}}' method='put'>
-{{#if user.flag}}
-
+<form action='/profil/{{user.id}}' method='post'>
+{{#if user.dataValues.flag}}
+{{user.dataValues.flag}}
   <div>
     <input type='text' placeholder='фото' name="img"/>
   </div>
@@ -20,14 +20,6 @@
   <div>
     <input type='text' placeholder='соц сети' name="link"/>
   </div>
-  
-<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-  <span class="mdl-checkbox__label">Checkbox</span>
-</label>
-</label>
-
-  {{/if}} 
 
   <div>
     <input type='text' placeholder='ФИО' name="name"/>
@@ -38,7 +30,7 @@
   <div>
     <input type='text' placeholder='соц сети' name="link"/>
   </div>
+{{/if}}
   <button type='submit'>Сохранить</button>
-
 </form>
 
