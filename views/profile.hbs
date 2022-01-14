@@ -1,45 +1,7 @@
-<div>
-  <h1> Profile </h1>
-  <div>
-    {{#with user}}
-      <div> ФИО {{name}} </div>
-      <div> стаж {{exp}} </div>
-      <div> о себе {{about}} </div>
-      <div> теги {{tags}} </div>
-    {{/with}}
-  </div>
-</div>
-<div>
-    <ul class ="search-list">
-      {{#each mentor}}
-      <li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <form action='/user/profile/{{userid}}' method='put'>
 {{#if user.flag}}
->>>>>>> d5bd4528ffa264c718f8521467de40fe2a95cb0d
+
   <div>
     <input type='text' placeholder='фото' name=""/>
   </div>
