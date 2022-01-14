@@ -7,7 +7,7 @@ const { Menthor } = require('../db/models/');
 router.get('/', async (req, res) => {
 
 const mentor = await Menthor.findAll()
-console.log(mentor)
+//console.log(mentor)
 return res.render('index', { mentor });
 });
 

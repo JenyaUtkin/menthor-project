@@ -2,7 +2,7 @@
 <div class='container'>
   <h1>Главная страница</h1>
   <div class="search-container">
-    <form action='/' method='post'>
+    <form action='/' method='post' name="searcher3000">
       <div class='mdl-textfield mdl-js-textfield'>
         <label class='mdl-textfield__label' for='search'>
         </label>
@@ -13,18 +13,22 @@
           name='search'
           placeholder='найти ментора'
         />
-
+<!-- Flat button -->
       </div>
+          <button class="mdl-button mdl-js-button">
+            Button
+          </button>
     </form>
 
   </div>
 
   <div>
-    <ul class ="search-list">
-      {{#each mentor}}
-      <li>
+    <div class ="search-list mdl-grid">
 
-        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+      {{#each mentor}}
+      
+
+        <div class="mdl-cell demo-card-square mdl-card mdl-shadow--2dp">
           <img src="{{this.img}}">
               <div class="mdl-card__title mdl-card--expand">
             <h2 class="mdl-card__title-text">{{this.name}}</h2>
@@ -38,10 +42,10 @@
           </a>
           </div>
         </div>
-      </li>
+      
 
       {{/each}}
-    </ul>
+    </div>
   </div>
 </div>
 
