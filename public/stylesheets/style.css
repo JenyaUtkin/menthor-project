@@ -9,3 +9,6 @@
 .search-list li.hide {
   display: none;
 }
+.search-list {
+  list-style: none
+}

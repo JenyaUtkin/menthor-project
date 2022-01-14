@@ -9,6 +9,8 @@
     {{/with}}
   </div>
 </div> --}}
+
+
 <form action='/user/profile/{{userid}}' method='put'>
 {{#if user.flag}}
   <div>
@@ -29,7 +31,7 @@
   <div>
     <input type='text' placeholder='соц сети' name="link"/>
   </div>
-  {{/if}}
+  {{/if}} 
 
   <div>
     <input type='text' placeholder='ФИО' name="name"/>
