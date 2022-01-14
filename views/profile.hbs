@@ -1,9 +1,9 @@
 
-<form action='/user/profile/{{userid}}' method='put'>
-{{#if user.flag}}
-
+<form action='/profil/{{user.id}}' method='post'>
+{{#if user.dataValues.flag}}
+{{user.dataValues.flag}}
   <div>
-    <input type='text' placeholder='фото' name=""/>
+    <input type='text' placeholder='фото' name="img"/>
   </div>
   <div>
     <input type='text' placeholder='ФИО' name="name"/>
@@ -20,7 +20,8 @@
   <div>
     <input type='text' placeholder='соц сети' name="link"/>
   </div>
-  {{/if}} 
+ 
+  {{else}} 
 
   <div>
     <input type='text' placeholder='ФИО' name="name"/>
@@ -31,7 +32,7 @@
   <div>
     <input type='text' placeholder='соц сети' name="link"/>
   </div>
+{{/if}}
   <button type='submit'>Сохранить</button>
-
 </form>
 
