@@ -1,36 +1,30 @@
-
-<form action='/profil/{{user.id}}' method='post'>
-{{#if user.dataValues.flag}}
-{{user.dataValues.flag}}
-  <div>
-    <input type='text' placeholder='фото' name="img"/>
-  </div>
-  <div>
-    <input type='text' placeholder='ФИО' name="name"/>
-  </div>
-  <div>
-    <input type='text' placeholder='О себе' name="body"/>
-  </div>
-  <div>
-    <input type='text' placeholder='Прайс' name="price"/>
-  </div>
-  <div>
-    <input type='text' placeholder='опыт работы' name="title"/>
-  </div>
-  <div>
-    <input type='text' placeholder='соц сети' name="link"/>
-  </div>
-
-  <div>
-    <input type='text' placeholder='ФИО' name="name"/>
-  </div>
-  <div>
-    <input type='text' placeholder='О себе' name="body"/>
+<form class='container' action='/profil/{{user.id}}' method='post'>
+  {{#if user.dataValues.flag}}
+    {{!-- {{user.dataValues.flag}} --}}
+    <div class='mdl-textfield mdl-js-textfield'>
+      <label class='mdl-textfield__label'>ФИО</label>
+      <input class='mdl-textfield__input' type='text' name='name' />
     </div>
-  <div>
-    <input type='text' placeholder='соц сети' name="link"/>
-  </div>
-{{/if}}
-  <button type='submit'>Сохранить</button>
-</form>
+    <div class='mdl-textfield mdl-js-textfield'>
+      <label class='mdl-textfield__label'>О себе</label>
+      <input class='mdl-textfield__input' type='text' name='body' />
+    </div>
+    <div class='mdl-textfield mdl-js-textfield'>
+      <label class='mdl-textfield__label'>Прайс</label>
+      <input class='mdl-textfield__input' type='text' name='price' />
+    </div>
+    <div class='mdl-textfield mdl-js-textfield'>
+      <label class='mdl-textfield__label'>опыт работы</label>
+      <input class='mdl-textfield__input' type='text' name='title' />
+    </div>
+    <div class='mdl-textfield mdl-js-textfield'>
+      <label class='mdl-textfield__label'>соц сети</label>
+      <input class='mdl-textfield__input' type='text' name='link' />
+    </div>
 
+  {{/if}}
+  <button
+    class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent center'
+    type='submit'
+  >Сохранить</button>
+</form>

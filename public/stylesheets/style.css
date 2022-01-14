@@ -1,5 +1,8 @@
 .container {
-  padding: 100px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container1 {
@@ -10,5 +13,5 @@
   display: none;
 }
 .search-list {
-  list-style: none
+  list-style: none;
 }
