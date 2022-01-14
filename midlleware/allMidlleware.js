@@ -13,7 +13,7 @@ const deeper = (req, res, next) => {
   }
 };
 const welcomeUser = (req, res, next) => {
-  res.locals.userId = req.session?.userId;
+  res.locals.userId = req.session.userId;
   if (req.session) {
     res.locals.userName = req.session.userName;
   }

@@ -5,3 +5,7 @@
 .container1 {
   padding: 10px;
 }
+
+.search-list li.hide {
+  display: none;
+}

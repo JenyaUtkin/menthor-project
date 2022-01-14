@@ -9,28 +9,36 @@
     {{/with}}
   </div>
 </div> --}}
-
 <form action='/user/profile/{{userid}}' method='put'>
+{{#if user.flag}}
   <div>
-    <input type='text' placeholder='фото' />
+    <input type='text' placeholder='фото' name=""/>
   </div>
   <div>
-    <input type='text' placeholder='ФИО' />
+    <input type='text' placeholder='ФИО' name="name"/>
   </div>
   <div>
-    <input type='text' placeholder='О себе' />
+    <input type='text' placeholder='О себе' name="body"/>
   </div>
   <div>
-    <input type='text' placeholder='Прайс' />
+    <input type='text' placeholder='Прайс' name="price"/>
   </div>
   <div>
-    <input type='text' placeholder='опыт работы' />
+    <input type='text' placeholder='опыт работы' name="title"/>
   </div>
   <div>
-    <input type='text' placeholder='соц сети' />
+    <input type='text' placeholder='соц сети' name="link"/>
+  </div>
+  {{/if}}
+
+  <div>
+    <input type='text' placeholder='ФИО' name="name"/>
   </div>
   <div>
-    <input type='text' placeholder='теги' />
+    <input type='text' placeholder='О себе' name="body"/>
+    </div>
+  <div>
+    <input type='text' placeholder='соц сети' name="link"/>
   </div>
   <button type='submit'>Сохранить</button>
 </form>
