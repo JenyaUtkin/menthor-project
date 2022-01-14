@@ -1,4 +1,4 @@
-{{!-- <div>
+<div>
   <h1> Profile </h1>
   <div>
     {{#with user}}
@@ -8,9 +8,49 @@
       <div> теги {{tags}} </div>
     {{/with}}
   </div>
-</div> --}}
+</div>
+<div>
+    <ul class ="search-list">
+      {{#each mentor}}
+      <li>
 
-<form action='/user/profile/{{userid}}' method='put'>
+        <div class="demo-card-square mdl-card mdl-shadow--2dp">
+          <img src="{{this.img}}">
+              <div class="mdl-card__title mdl-card--expand">
+            <h2 class="mdl-card__title-text">{{this.name}}</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              {{this.body}}
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+          <a href="user/profile/{{this.id}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Подробнее
+          </a>
+          </div>
+        </div>
+      </li>
+
+      {{/each}}
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <form action='/user/profile/{{userid}}' method='put'>
   <div>
     <input type='text' placeholder='фото' />
   </div>
@@ -33,4 +73,4 @@
     <input type='text' placeholder='теги' />
   </div>
   <button type='submit'>Сохранить</button>
-</form>
+</form> --}}

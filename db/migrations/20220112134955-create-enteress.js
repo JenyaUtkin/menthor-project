@@ -18,7 +18,7 @@ module.exports = {
       profils_id: {
         type: Sequelize.INTEGER,
         references:{
-          model:'Menthor',
+          model:'Menthors',
           key:'id'
         }
       },

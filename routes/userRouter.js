@@ -16,7 +16,7 @@ router.post("/register", async (req, res) => {
   req.session.userName = user.name;
   //req.session.userEmail = user.email;
   req.session.userId = user.id;
- res.redirect('/')
+ res.redirect(`/profil/${user.id}`)
   //res.redirect(`/user/profile/${user.id}`);
 });
 
@@ -75,5 +75,6 @@ router.get("/exit", (req, res) => {
   res.clearCookie("myAuth");
   return res.redirect("/");
 });
+
 
 module.exports = router

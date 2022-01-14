@@ -1,4 +1,4 @@
-<form action='/user/profile/{{userid}}' method='put'>
+<form action='/cabinet/{{user.id}}' method='GET'>
   <div>
     <input type='text' placeholder='фото' />
   </div>
@@ -17,8 +17,6 @@
   <div>
     <input type='text' placeholder='соц сети' />
   </div>
-  <div>
-    <input type='text' placeholder='теги' />
-  </div>
+  
   <button type='submit'>редактировать</button>
 </form>
