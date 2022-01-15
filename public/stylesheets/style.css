@@ -9,13 +9,40 @@
   position: relative;
   top: 50px;
 }
-
-.search-list li.hide {
+/* .search-list{
+  display: flex; 
+  justify-content: center;
+  flex-direction: row;
+} */
+#search-list li.hide {
+  
   display: none;
 }
-.search-list {
+#search-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
+
+
+li{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 300px;
+  min-width: 150px;
+  width: 100%; */
+}
+/* .cards {
+  margin: 0;
+  padding: 0;
+  max-width: 300px;
+  min-width: 150px;
+  width: 100%;
+} */
 
 .mdl-layout__drawer-button {
   display: flex !important;

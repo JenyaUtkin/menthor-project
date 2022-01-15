@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {checkUser, deeper, welcomeUser} = require('../midlleware/allMidlleware')
-const {Users, Tags, Practis,Enteresses,Menthor} = require('../db/models/');
+const {Users, Tags, Practis, Enteresses, Menthor} = require('../db/models/');
 const sha256 = require('sha256');
 const enteress = require('../db/models/enteress');
 
@@ -16,7 +16,7 @@ router.post("/register", async (req, res) => {
   req.session.userName = user.name;
   //req.session.userEmail = user.email;
   req.session.userId = user.id;
- res.redirect(`/profil/${user.id}`)
+  res.redirect(`/profil/${user.id}`)
   //res.redirect(`/user/profile/${user.id}`);
 });
 
